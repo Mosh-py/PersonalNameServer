@@ -5,5 +5,5 @@ COPY pom.xml pom.xml
 COPY src ./src
 RUN mvn -q -e -DskipTests dependency:resolve dependency:resolve-plugins
 RUN mvn -q -e -DskipTests package
-ENTRYPOINT ["java","-jar", "target/*.jar"]
-
+RUN cp target/*.jar app.jar
+ENTRYPOINT ["java","-jar", "app.jar"]
