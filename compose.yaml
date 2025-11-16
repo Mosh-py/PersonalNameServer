@@ -1,0 +1,43 @@
+
+
+services:
+  mapper:
+    build: .
+    #command: java -jar app.jar
+    ports:
+      - target: 8080
+        published: 5001
+    networks:
+      - counter-net
+    restart: always
+    environment: 
+         spring.datasource.url: jdbc:mysql://mysql:3306/urlMapper
+         spring.datasource.username: root
+         spring.datasource.password: root
+    depends_on:
+      - mysql  
+
+  mysql:
+    image: mysql:latest
+    restart: always
+    deploy:
+      replicas: 1
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: urlMapper
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    networks:
+      - counter-net
+    volumes:
+      - type: volume
+        source: counter-vol
+        target: /var/lib/mysql
+        
+
+
+networks:
+  counter-net:
+
+volumes:
+  counter-vol:
