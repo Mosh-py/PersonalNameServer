@@ -29,5 +29,6 @@ Think of it like a personal DNS for URLs — shield long, complicated links behi
 * docker compose up
 * <img width="1920" height="995" alt="Runnning Docker Compose up" src="https://github.com/user-attachments/assets/a652591e-f662-4636-9bce-94cb03605890" />
 ### Go to your local Browser and type
-* http://localhost:8080/
+* http://localhost:5001/
+<img width="1346" height="812" alt="Home Page Of Personal Name Server" src="https://github.com/user-attachments/assets/def83072-499d-4c93-b5f2-d761e8c368ce" />
 
