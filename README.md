@@ -27,5 +27,7 @@ Think of it like a personal DNS for URLs — shield long, complicated links behi
 * git clone https://github.com/Mosh-py/PersonalNameServer.git
 * cd PersonalNameServer
 * docker compose up
+* <img width="1920" height="995" alt="Runnning Docker Compose up" src="https://github.com/user-attachments/assets/a652591e-f662-4636-9bce-94cb03605890" />
 ### Go to your local Browser and type
 * http://localhost:8080/
+
